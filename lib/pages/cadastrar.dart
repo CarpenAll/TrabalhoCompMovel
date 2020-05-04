@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_list/models/tarefa.model.dart';
+import 'package:todo_list/models/tarefa.dart';
 
 class CadastrarPage extends StatelessWidget {
   var _formKey = GlobalKey<FormState>();
@@ -62,7 +62,7 @@ class CadastrarPage extends StatelessWidget {
               height: 50,
               width: 100,
               child: RaisedButton(
-                color: Colors.blue,
+                color: Colors.red,
                 child: Text(
                   'Cadastrar',
                   style: TextStyle(color: Colors.white),

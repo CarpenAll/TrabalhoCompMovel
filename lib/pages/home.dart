@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:todo_list/models/tarefa.model.dart';
-import 'package:todo_list/pages/cadastrar.page.dart';
+import 'package:todo_list/models/tarefa.dart';
+import 'package:todo_list/pages/cadastrar.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,14 +14,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Tarefas'),
+        title: Text('Tarefas a Fazer'),
       ),
       body: Container(
         padding: EdgeInsets.symmetric(vertical: 20),
         child: widget.tarefas.length == 0
             ? ListTile(
                 leading: Icon(Icons.info_outline),
-                title: Text('Mensagem'),
+                title: Text('Atenção'),
                 subtitle: Text('A lista de tarefas está vazia'),
               )
             : ListView.builder(
